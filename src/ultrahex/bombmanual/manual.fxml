@@ -1,0 +1,318 @@
+<!--
+  ~ This file is part of Bomb Manual.
+  ~
+  ~ Bomb Manual is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ Bomb Manual is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<!--
+  ~ This file is part of Bomb Manual.
+  ~
+  ~ Bomb Manual is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ Bomb Manual is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="ultrahex.bombmanual.Controller"
+            stylesheets="/ultrahex/bombmanual/boom.css" minWidth="640" minHeight="480" maxWidth="Infinity"
+            maxHeight="Infinity" prefWidth="800" prefHeight="600">
+  <center>
+    <TabPane tabClosingPolicy="UNAVAILABLE">
+      <Tab fx:id="bombTab" text="Bomb">
+        <VBox alignment="CENTER" spacing="10">
+          <GridPane alignment="CENTER" hgap="10" vgap="10">
+            <fx:define>
+              <ToggleGroup fx:id="bombIndicatorBOB"/>
+              <ToggleGroup fx:id="bombIndicatorCAR"/>
+              <ToggleGroup fx:id="bombIndicatorCLR"/>
+              <ToggleGroup fx:id="bombIndicatorFRK"/>
+              <ToggleGroup fx:id="bombIndicatorFRQ"/>
+              <ToggleGroup fx:id="bombIndicatorIND"/>
+              <ToggleGroup fx:id="bombIndicatorMSA"/>
+              <ToggleGroup fx:id="bombIndicatorNSA"/>
+              <ToggleGroup fx:id="bombIndicatorSIG"/>
+              <ToggleGroup fx:id="bombIndicatorSND"/>
+              <ToggleGroup fx:id="bombIndicatorTRN"/>
+            </fx:define>
+            <Label text="Serial Number:" GridPane.halignment="RIGHT" GridPane.rowIndex="0"
+                   GridPane.columnIndex="0"/>
+            <TextField fx:id="bombSerialNumber" prefColumnCount="6" GridPane.rowIndex="0" GridPane.columnIndex="1"
+                       GridPane.columnSpan="3"/>
+
+            <Label text="Indicator" GridPane.halignment="RIGHT" GridPane.rowIndex="1"/>
+            <Label text="None" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <Label text="Unlit" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+            <Label text="Lit" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+
+            <Label text="BOB:" styleClass="indicator" GridPane.halignment="RIGHT" GridPane.rowIndex="2"
+                   GridPane.columnIndex="0"/>
+            <RadioButton selected="true" toggleGroup="$bombIndicatorBOB" styleClass="no-label"
+                         GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <RadioButton toggleGroup="$bombIndicatorBOB" styleClass="no-label" GridPane.halignment="CENTER"
+                         GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+            <RadioButton toggleGroup="$bombIndicatorBOB" styleClass="no-label" GridPane.halignment="CENTER"
+                         GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+
+            <Label text="CAR:" styleClass="indicator" GridPane.halignment="RIGHT" GridPane.rowIndex="3"
+                   GridPane.columnIndex="0"/>
+            <RadioButton selected="true" toggleGroup="$bombIndicatorCAR" styleClass="no-label"
+                         GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            <RadioButton toggleGroup="$bombIndicatorCAR" styleClass="no-label" GridPane.halignment="CENTER"
+                         GridPane.rowIndex="3" GridPane.columnIndex="2"/>
+            <RadioButton toggleGroup="$bombIndicatorCAR" styleClass="no-label" GridPane.halignment="CENTER"
+                         GridPane.rowIndex="3" GridPane.columnIndex="3"/>
+
+            <Label text="CLR:" styleClass="indicator" GridPane.halignment="RIGHT" GridPane.rowIndex="4"
+                   GridPane.columnIndex="0"/>
+            <RadioButton selected="true" toggleGroup="$bombIndicatorCLR" styleClass="no-label"
+                         GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+            <RadioButton toggleGroup="$bombIndicatorCLR" styleClass="no-label" GridPane.halignment="CENTER"
+                         GridPane.rowIndex="4" GridPane.columnIndex="2"/>
+            <RadioButton toggleGroup="$bombIndicatorCLR" styleClass="no-label" GridPane.halignment="CENTER"
+                         GridPane.rowIndex="4" GridPane.columnIndex="3"/>
+
+            <Label text="FRK:" styleClass="indicator" GridPane.halignment="RIGHT" GridPane.rowIndex="5"
+                   GridPane.columnIndex="0"/>
+            <RadioButton selected="true" toggleGroup="$bombIndicatorFRK" styleClass="no-label"
+                         GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+            <RadioButton toggleGroup="$bombIndicatorFRK" styleClass="no-label" GridPane.halignment="CENTER"
+                         GridPane.rowIndex="5" GridPane.columnIndex="2"/>
+            <RadioButton toggleGroup="$bombIndicatorFRK" styleClass="no-label" GridPane.halignment="CENTER"
+                         GridPane.rowIndex="5" GridPane.columnIndex="3"/>
+
+            <Label text="FRQ:" styleClass="indicator" GridPane.halignment="RIGHT" GridPane.rowIndex="6"
+                   GridPane.columnIndex="0"/>
+            <RadioButton selected="true" toggleGroup="$bombIndicatorFRQ" styleClass="no-label"
+                         GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+            <RadioButton toggleGroup="$bombIndicatorFRQ" styleClass="no-label" GridPane.halignment="CENTER"
+                         GridPane.rowIndex="6" GridPane.columnIndex="2"/>
+            <RadioButton toggleGroup="$bombIndicatorFRQ" styleClass="no-label" GridPane.halignment="CENTER"
+                         GridPane.rowIndex="6" GridPane.columnIndex="3"/>
+
+            <Label text="IND:" styleClass="indicator" GridPane.halignment="RIGHT" GridPane.rowIndex="7"
+                   GridPane.columnIndex="0"/>
+            <RadioButton selected="true" toggleGroup="$bombIndicatorIND" styleClass="no-label"
+                         GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+            <RadioButton toggleGroup="$bombIndicatorIND" styleClass="no-label" GridPane.halignment="CENTER"
+                         GridPane.rowIndex="7" GridPane.columnIndex="2"/>
+            <RadioButton toggleGroup="$bombIndicatorIND" styleClass="no-label" GridPane.halignment="CENTER"
+                         GridPane.rowIndex="7" GridPane.columnIndex="3"/>
+
+            <Label text="MSA:" styleClass="indicator" GridPane.halignment="RIGHT" GridPane.rowIndex="8"
+                   GridPane.columnIndex="0"/>
+            <RadioButton selected="true" toggleGroup="$bombIndicatorMSA" styleClass="no-label"
+                         GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+            <RadioButton toggleGroup="$bombIndicatorMSA" styleClass="no-label" GridPane.halignment="CENTER"
+                         GridPane.rowIndex="8" GridPane.columnIndex="2"/>
+            <RadioButton toggleGroup="$bombIndicatorMSA" styleClass="no-label" GridPane.halignment="CENTER"
+                         GridPane.rowIndex="8" GridPane.columnIndex="3"/>
+
+            <Label text="NSA:" styleClass="indicator" GridPane.halignment="RIGHT" GridPane.rowIndex="9"
+                   GridPane.columnIndex="0"/>
+            <RadioButton selected="true" toggleGroup="$bombIndicatorNSA" styleClass="no-label"
+                         GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+            <RadioButton toggleGroup="$bombIndicatorNSA" styleClass="no-label" GridPane.halignment="CENTER"
+                         GridPane.rowIndex="9" GridPane.columnIndex="2"/>
+            <RadioButton toggleGroup="$bombIndicatorNSA" styleClass="no-label" GridPane.halignment="CENTER"
+                         GridPane.rowIndex="9" GridPane.columnIndex="3"/>
+
+            <Label text="SIG:" styleClass="indicator" GridPane.halignment="RIGHT" GridPane.rowIndex="10"
+                   GridPane.columnIndex="0"/>
+            <RadioButton selected="true" toggleGroup="$bombIndicatorSIG" styleClass="no-label"
+                         GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.columnIndex="1"/>
+            <RadioButton toggleGroup="$bombIndicatorSIG" styleClass="no-label" GridPane.halignment="CENTER"
+                         GridPane.rowIndex="10" GridPane.columnIndex="2"/>
+            <RadioButton toggleGroup="$bombIndicatorSIG" styleClass="no-label" GridPane.halignment="CENTER"
+                         GridPane.rowIndex="10" GridPane.columnIndex="3"/>
+
+            <Label text="SND:" styleClass="indicator" GridPane.halignment="RIGHT" GridPane.rowIndex="11"
+                   GridPane.columnIndex="0"/>
+            <RadioButton selected="true" toggleGroup="$bombIndicatorSND" styleClass="no-label"
+                         GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.columnIndex="1"/>
+            <RadioButton toggleGroup="$bombIndicatorSND" styleClass="no-label" GridPane.halignment="CENTER"
+                         GridPane.rowIndex="11" GridPane.columnIndex="2"/>
+            <RadioButton toggleGroup="$bombIndicatorSND" styleClass="no-label" GridPane.halignment="CENTER"
+                         GridPane.rowIndex="11" GridPane.columnIndex="3"/>
+
+            <Label text="TRN:" styleClass="indicator" GridPane.halignment="RIGHT" GridPane.rowIndex="12"
+                   GridPane.columnIndex="0"/>
+            <RadioButton selected="true" toggleGroup="$bombIndicatorTRN" styleClass="no-label"
+                         GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.columnIndex="1"/>
+            <RadioButton toggleGroup="$bombIndicatorTRN" styleClass="no-label" GridPane.halignment="CENTER"
+                         GridPane.rowIndex="12" GridPane.columnIndex="2"/>
+            <RadioButton toggleGroup="$bombIndicatorTRN" styleClass="no-label" GridPane.halignment="CENTER"
+                         GridPane.rowIndex="12" GridPane.columnIndex="3"/>
+
+            <Label text="AA Batteries:" GridPane.halignment="RIGHT" GridPane.rowIndex="13"
+                   GridPane.columnIndex="0"/>
+            <Spinner fx:id="bombAABatteries" min="0" max="9" initialValue="0" editable="true"
+                     styleClass="split-arrows-horizontal" GridPane.halignment="CENTER" GridPane.rowIndex="13"
+                     GridPane.columnIndex="1" GridPane.columnSpan="3"/>
+
+            <Label text="D Batteries:" GridPane.halignment="RIGHT" GridPane.rowIndex="14" GridPane.columnIndex="0"/>
+            <Spinner fx:id="bombDBatteries" min="0" max="9" initialValue="0" editable="true"
+                     styleClass="split-arrows-horizontal" GridPane.halignment="CENTER" GridPane.rowIndex="14"
+                     GridPane.columnIndex="1" GridPane.columnSpan="3"/>
+          </GridPane>
+          <HBox alignment="CENTER" spacing="10">
+            <Label text="Ports:"/>
+            <CheckBox text="DVI-D"/>
+            <CheckBox text="Parallel"/>
+            <CheckBox text="PS/2"/>
+            <CheckBox text="RJ-45"/>
+            <CheckBox text="Serial"/>
+            <CheckBox text="Stereo RCA"/>
+          </HBox>
+        </VBox>
+      </Tab>
+      <Tab fx:id="wiresTab" text="Wires">
+        <VBox alignment="CENTER" spacing="10">
+          <fx:define>
+            <ToggleGroup fx:id="wiresColor1"/>
+            <ToggleGroup fx:id="wiresColor2"/>
+            <ToggleGroup fx:id="wiresColor3"/>
+            <ToggleGroup fx:id="wiresColor4"/>
+            <ToggleGroup fx:id="wiresColor5"/>
+            <ToggleGroup fx:id="wiresColor6"/>
+          </fx:define>
+          <Spinner fx:id="wiresCount" min="3" max="6" initialValue="3" editable="true"
+                   styleClass="split-arrows-horizontal"/>
+          <HBox alignment="CENTER" spacing="20">
+            <Label text="Wire 1:"/>
+            <RadioButton text="Red" toggleGroup="$wiresColor1" styleClass="red"/>
+            <RadioButton text="Yellow" toggleGroup="$wiresColor1" styleClass="yellow"/>
+            <RadioButton text="Blue" toggleGroup="$wiresColor1" styleClass="blue"/>
+            <RadioButton text="Black" toggleGroup="$wiresColor1" styleClass="black"/>
+            <RadioButton text="White" toggleGroup="$wiresColor1" styleClass="white"/>
+          </HBox>
+          <HBox alignment="CENTER" spacing="20">
+            <Label text="Wire 2:"/>
+            <RadioButton text="Red" toggleGroup="$wiresColor2" styleClass="red"/>
+            <RadioButton text="Yellow" toggleGroup="$wiresColor2" styleClass="yellow"/>
+            <RadioButton text="Blue" toggleGroup="$wiresColor2" styleClass="blue"/>
+            <RadioButton text="Black" toggleGroup="$wiresColor2" styleClass="black"/>
+            <RadioButton text="White" toggleGroup="$wiresColor2" styleClass="white"/>
+          </HBox>
+          <HBox alignment="CENTER" spacing="20">
+            <Label text="Wire 3:"/>
+            <RadioButton text="Red" toggleGroup="$wiresColor3" styleClass="red"/>
+            <RadioButton text="Yellow" toggleGroup="$wiresColor3" styleClass="yellow"/>
+            <RadioButton text="Blue" toggleGroup="$wiresColor3" styleClass="blue"/>
+            <RadioButton text="Black" toggleGroup="$wiresColor3" styleClass="black"/>
+            <RadioButton text="White" toggleGroup="$wiresColor3" styleClass="white"/>
+          </HBox>
+          <HBox alignment="CENTER" spacing="20" visible="${wiresCount.value >= 4.0}">
+            <Label text="Wire 4:"/>
+            <RadioButton text="Red" toggleGroup="$wiresColor4" styleClass="red"/>
+            <RadioButton text="Yellow" toggleGroup="$wiresColor4" styleClass="yellow"/>
+            <RadioButton text="Blue" toggleGroup="$wiresColor4" styleClass="blue"/>
+            <RadioButton text="Black" toggleGroup="$wiresColor4" styleClass="black"/>
+            <RadioButton text="White" toggleGroup="$wiresColor4" styleClass="white"/>
+          </HBox>
+          <HBox alignment="CENTER" spacing="20" visible="${wiresCount.value >= 5.0}">
+            <Label text="Wire 5:"/>
+            <RadioButton text="Red" toggleGroup="$wiresColor5" styleClass="red"/>
+            <RadioButton text="Yellow" toggleGroup="$wiresColor5" styleClass="yellow"/>
+            <RadioButton text="Blue" toggleGroup="$wiresColor5" styleClass="blue"/>
+            <RadioButton text="Black" toggleGroup="$wiresColor5" styleClass="black"/>
+            <RadioButton text="White" toggleGroup="$wiresColor5" styleClass="white"/>
+          </HBox>
+          <HBox alignment="CENTER" spacing="20" visible="${wiresCount.value >= 6.0}">
+            <Label text="Wire 6:"/>
+            <RadioButton text="Red" toggleGroup="$wiresColor6" styleClass="red"/>
+            <RadioButton text="Yellow" toggleGroup="$wiresColor6" styleClass="yellow"/>
+            <RadioButton text="Blue" toggleGroup="$wiresColor6" styleClass="blue"/>
+            <RadioButton text="Black" toggleGroup="$wiresColor6" styleClass="black"/>
+            <RadioButton text="White" toggleGroup="$wiresColor6" styleClass="white"/>
+          </HBox>
+          <Label fx:id="wiresOutput" text="" visible="false" styleClass="output"/>
+        </VBox>
+      </Tab>
+      <Tab fx:id="buttonTab" text="Button">
+        <VBox alignment="CENTER" spacing="30">
+          <GridPane alignment="CENTER" hgap="10" vgap="10">
+            <Label text="Button Color:" GridPane.halignment="RIGHT" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <HBox alignment="CENTER" spacing="10" GridPane.rowIndex="0" GridPane.columnIndex="1">
+              <fx:define>
+                <ToggleGroup fx:id="buttonColor"/>
+              </fx:define>
+              <RadioButton text="Red" toggleGroup="$buttonColor" styleClass="red"/>
+              <RadioButton text="Yellow" toggleGroup="$buttonColor" styleClass="yellow"/>
+              <RadioButton text="Blue" toggleGroup="$buttonColor" styleClass="blue"/>
+              <RadioButton text="White" toggleGroup="$buttonColor" styleClass="white"/>
+            </HBox>
+
+            <Label text="Text:" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="buttonText" promptText="choose..." GridPane.rowIndex="1" GridPane.columnIndex="1">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Abort"/>
+                  <String fx:value="Detonate"/>
+                  <String fx:value="Hold"/>
+                  <String fx:value="Press"/>
+                </FXCollections>
+              </items>
+            </ComboBox>
+
+            <Label text="Batteries:" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <Spinner fx:id="buttonBatteries" min="0" max="9" initialValue="0" editable="true"
+                     styleClass="split-arrows-horizontal" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <Label text="Lit FRK Indicator" GridPane.halignment="RIGHT" GridPane.rowIndex="3"
+                   GridPane.columnIndex="0"/>
+            <CheckBox fx:id="buttonIndicator" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+            <Label text="Strip Color:" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <HBox alignment="CENTER" spacing="10" GridPane.rowIndex="4" GridPane.columnIndex="1">
+              <fx:define>
+                <ToggleGroup fx:id="buttonStripColor"/>
+              </fx:define>
+              <RadioButton text="Red" toggleGroup="$buttonStripColor" styleClass="red"/>
+              <RadioButton text="Yellow" toggleGroup="$buttonStripColor" styleClass="yellow"/>
+              <RadioButton text="Blue" toggleGroup="$buttonStripColor" styleClass="blue"/>
+              <RadioButton text="White" toggleGroup="$buttonStripColor" styleClass="white"/>
+            </HBox>
+          </GridPane>
+          <Label fx:id="buttonOutput" text="" visible="false" styleClass="output"/>
+        </VBox>
+      </Tab>
+    </TabPane>
+  </center>
+  <bottom>
+    <BorderPane styleClass="reset-bar">
+      <left>
+        <HBox alignment="BASELINE_CENTER" spacing="10">
+          <Label text="Strikes:"/>
+          <Spinner fx:id="strikes" min="0" max="2" initialValue="0" editable="true"
+                   styleClass="split-arrows-horizontal"/>
+        </HBox>
+      </left>
+      <right>
+        <Button fx:id="buttonReset" text="Reset"/>
+      </right>
+    </BorderPane>
+  </bottom>
+</BorderPane>

@@ -1,0 +1,50 @@
+.spinner {
+    -fx-pref-width: 100px;
+}
+
+.red {
+    -fx-background-color: red;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+    -fx-text-fill: white;
+}
+
+.yellow {
+    -fx-background-color: yellow;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+    -fx-text-fill: black;
+}
+
+.blue {
+    -fx-background-color: blue;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+    -fx-text-fill: white;
+}
+
+.black {
+    -fx-background-color: black;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+    -fx-text-fill: white;
+}
+
+.white {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+    -fx-text-fill: black;
+}
+
+.indicator {
+    -fx-font-family: monospace;
+}
+
+.no-label {
+    -fx-label-padding: 0;
+}
+
+.reset-bar {
+    -fx-padding: 10px;
+}
